@@ -10,5 +10,6 @@ namespace SistemaLocacao.Data
         }
 
         public DbSet<ClienteModel> Clientes { get; set; }
+        public DbSet<FilmeModel> Filmes { get; set; }
     }
 }

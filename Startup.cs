@@ -30,6 +30,7 @@ namespace SistemaLocacao
             services.AddEntityFrameworkSqlServer()
                 .AddDbContext<BancoContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DataBase")));
             services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
+            services.AddScoped<IFilmeRepositorio, FilmeRepositorio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

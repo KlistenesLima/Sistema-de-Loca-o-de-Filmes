@@ -1,0 +1,33 @@
+﻿@model FilmeModel;
+@{
+    ViewData["Title"] = "Criar filme";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">Cadastrar cliente</h1>
+
+</div>
+<form asp-controller="Filme" asp-action="Criar" method="post">
+    
+    <div class="form-group">
+        <label for="nome">Titulo</label>
+        <input type="text" asp-for="Titulo" class="form-control" placeholder="Digite o título do filme">
+        @Html.ValidationMessageFor(x => x.Titulo)
+    </div>
+    <div class="form-group">
+        <label for="nome">Classificação Indicativa</label>
+        <input type="text" asp-for="ClassificacaoIndicativa" class="form-control" placeholder="Digite classificação indicativa do filme">
+        @Html.ValidationMessageFor(x => x.ClassificacaoIndicativa)
+    </div>
+    <div class="form-group">
+        <label for="nome">Lançamento</label>
+        <input type="date" asp-for="Lancamento" class="form-control" placeholder="Digite a data de lançamento do filme">
+        @Html.ValidationMessageFor(x => x.Lancamento)
+    </div> 
+
+    <button type="submit" class="btn btn-primary btn-block">Adicionar</button>
+    <a class="btn btn-secondary btn-block" asp-controller="Filme" asp-action="Index" role="button">Voltar</a>
+
+</form>
+

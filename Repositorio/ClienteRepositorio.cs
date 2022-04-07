@@ -35,28 +35,28 @@ namespace SistemaLocacao.Repositorio
 
         public ClienteModel Atualizar(ClienteModel cliente)
         {
-            ClienteModel contatoDB = ListarPorId(cliente.Id);
+            ClienteModel clienteDB = ListarPorId(cliente.Id);
 
-            if (contatoDB == null) throw new System.Exception("Houve um erro na atualização do contato!");
+            if (clienteDB == null) throw new System.Exception("Houve um erro na atualização do contato!");
 
-            contatoDB.Nome = cliente.Nome;
-            contatoDB.CPF = cliente.CPF;
-            contatoDB.DataNascimento = cliente.DataNascimento;
+            clienteDB.Nome = cliente.Nome;
+            clienteDB.CPF = cliente.CPF;
+            clienteDB.DataNascimento = cliente.DataNascimento;
 
-            _context.Clientes.Update(contatoDB);
+            _context.Clientes.Update(clienteDB);
             _context.SaveChanges();
 
-            return contatoDB;
+            return clienteDB;
 
         }
 
         public bool Apagar(int id)
         {
-            ClienteModel contatoDB = ListarPorId(id);
+            ClienteModel clienteDB = ListarPorId(id);
 
-            if (contatoDB == null) throw new System.Exception("Houve um erro na deleção do contato!");
+            if (clienteDB == null) throw new System.Exception("Houve um erro na deleção do contato!");
 
-            _context.Clientes.Remove(contatoDB);
+            _context.Clientes.Remove(clienteDB);
             _context.SaveChanges();
 
             return true;

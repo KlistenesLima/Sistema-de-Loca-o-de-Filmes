@@ -1,12 +1,12 @@
-﻿@model List<ClienteModel>
+﻿@model List<FilmeModel>
 @{
-    ViewData["Title"] = "Listagem de clientes";
+    ViewData["Title"] = "Listagem de filmes";
 }
 
 <div class="text-center">
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" role="button" asp-controller="Cliente" asp-action="Criar"> Adicionar novo cliente</a>
+        <a class="btn btn-primary" role="button" asp-controller="Filme" asp-action="Criar"> Adicionar novo filme</a>
     </div>
 
     <br />
@@ -29,32 +29,30 @@
 
     <br />
 
-    <h1 class="display-4">Listagem de contatos</h1>
+    <h1 class="display-4">Listagem de filmes</h1>
 
     <table class="display" id="table-contatos" style="width:100%">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nome</th>
-                <th scope="col">CPF</th>
-                @*<th scope="col">Data de Nascimento</th>*@
+                <th scope="col">Titulo</th>
+                <th scope="col">Lancamento</th>
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
             @if (Model != null && Model.Any()) //Se a minha model távindo diferente de nulo e contando alguma informação contendo alguma informação dentro dela
             {
-                foreach (ClienteModel cliente in Model)
+                foreach (FilmeModel filme in Model)
                 {
                     <tr>
-                        <th scope="row">@cliente.Id</th>
-                        <td>@cliente.Nome</td>
-                        <td>@cliente.CPF</td>
-@*                        <td>@cliente.DataNascimento</td>*@
+                        <th scope="row">@filme.Id</th>
+                        <td>@filme.Titulo</td>
+                        <td>@filme.Lancamento</td>
                         <td>
                             <div class="btn-group" role="group">
-                                <a role="button" class="btn btn-primary" asp-route-id="@cliente.Id" asp-controller="Cliente" asp-action="Editar">Editar</a>
-                                <a role="button" class="btn btn-danger" asp-route-id="@cliente.Id" asp-controller="Cliente" asp-action="ApagarConfirmacao">Apagar</a>
+                                <a role="button" class="btn btn-primary" asp-route-id="@filme.Id" asp-controller="Filme" asp-action="Editar">Editar</a>
+                                <a role="button" class="btn btn-danger" asp-route-id="@filme.Id" asp-controller="Filme" asp-action="ApagarConfirmacao">Apagar</a>
                             </div>
                         </td>
                     </tr>
