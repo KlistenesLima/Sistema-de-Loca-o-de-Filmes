@@ -1,47 +1,47 @@
-﻿using ControleDeContatos.Data;
-using ControleDeContatos.Models;
+﻿using SistemaLocacao.Data;
+using SistemaLocacao.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ControleDeContatos.Repositorio
+namespace SistemaLocacao.Repositorio
 {
-    public class ContatoRepositorio : IContatoRepositorio
+    public class ClienteRepositorio : IClienteRepositorio
     {
         private readonly BancoContext _context;
 
-        public ContatoRepositorio(BancoContext bancoContext)
+        public ClienteRepositorio(BancoContext bancoContext)
         {
                 this._context = bancoContext;
         }
 
-        public ContatoModel ListarPorId(int id)
+        public ClienteModel ListarPorId(int id)
         {
             return _context.Contatos.FirstOrDefault(x => x.Id == id);
         }
 
-        public List<ContatoModel> BucarTodos()
+        public List<ClienteModel> BucarTodos()
         {
             return _context.Contatos.ToList();
         }
 
-        public ContatoModel Adicionar(ContatoModel contato)
+        public ClienteModel Adicionar(ClienteModel cliente)
         {
             // gravar no banco de dados
-            _context.Contatos.Add(contato);
+            _context.Contatos.Add(cliente);
             _context.SaveChanges();
 
-            return contato;
+            return cliente;
         }
 
-        public ContatoModel Atualizar(ContatoModel contato)
+        public ClienteModel Atualizar(ClienteModel cliente)
         {
-            ContatoModel contatoDB = ListarPorId(contato.Id);
+            ClienteModel contatoDB = ListarPorId(cliente.Id);
 
             if (contatoDB == null) throw new System.Exception("Houve um erro na atualização do contato!");
 
-            contatoDB.Nome = contato.Nome;
-            contatoDB.Email = contato.Email;
-            contatoDB.Celular = contato.Celular;
+            contatoDB.Nome = cliente.Nome;
+            contatoDB.Email = cliente.Email;
+            contatoDB.Celular = cliente.Celular;
 
             _context.Contatos.Update(contatoDB);
             _context.SaveChanges();
@@ -52,7 +52,7 @@ namespace ControleDeContatos.Repositorio
 
         public bool Apagar(int id)
         {
-            ContatoModel contatoDB = ListarPorId(id);
+            ClienteModel contatoDB = ListarPorId(id);
 
             if (contatoDB == null) throw new System.Exception("Houve um erro na deleção do contato!");
 

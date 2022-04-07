@@ -1,10 +1,10 @@
-﻿using ControleDeContatos.Data;
-using ControleDeContatos.Models;
+﻿using SistemaLocacao.Data;
+using SistemaLocacao.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ControleDeContatos.Repositorio
+namespace SistemaLocacao.Repositorio
 {
     public class UsuarioRepositorio : IUsuarioRepositorio
     {

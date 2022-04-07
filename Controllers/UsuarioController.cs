@@ -1,9 +1,9 @@
-﻿using ControleDeContatos.Models;
-using ControleDeContatos.Repositorio;
+﻿using SistemaLocacao.Models;
+using SistemaLocacao.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace ControleDeContatos.Controllers
+namespace SistemaLocacao.Controllers
 {
     public class UsuarioController : Controller
     {

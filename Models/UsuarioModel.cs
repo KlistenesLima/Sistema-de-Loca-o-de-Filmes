@@ -1,8 +1,8 @@
-﻿using ControleDeContatos.Enums;
+﻿using SistemaLocacao.Enums;
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace ControleDeContatos.Models
+namespace SistemaLocacao.Models
 {
     public class UsuarioModel
     {

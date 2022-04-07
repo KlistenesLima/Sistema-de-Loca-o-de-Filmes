@@ -1,4 +1,4 @@
-﻿@model List<ContatoModel>
+﻿@model List<ClienteModel>
 @{
     ViewData["Title"] = "Listagem de clientes";
 }
@@ -6,7 +6,7 @@
 <div class="text-center">
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" role="button" asp-controller="Contato" asp-action="Criar"> Adicionar novo contato</a>
+        <a class="btn btn-primary" role="button" asp-controller="Cliente" asp-action="Criar"> Adicionar novo contato</a>
     </div>
 
     <br />
@@ -44,17 +44,17 @@
         <tbody>
             @if (Model != null && Model.Any()) //Se a minha model távindo diferente de nulo e contando alguma informação contendo alguma informação dentro dela
             {
-                foreach (ContatoModel contato in Model)
+                foreach (ClienteModel cliente in Model)
                 {
                     <tr>
-                        <th scope="row">@contato.Id</th>
-                        <td>@contato.Nome</td>
-                        <td>@contato.Email</td>
-                        <td>@contato.Celular</td>
+                        <th scope="row">@cliente.Id</th>
+                        <td>@cliente.Nome</td>
+                        <td>@cliente.Email</td>
+                        <td>@cliente.Celular</td>
                         <td>
                             <div class="btn-group" role="group">
-                                <a role="button" class="btn btn-primary" asp-route-id="@contato.Id" asp-controller="Contato" asp-action="Editar">Editar</a>
-                                <a role="button" class="btn btn-danger" asp-route-id="@contato.Id" asp-controller="Contato" asp-action="ApagarConfirmacao">Apagar</a>
+                                <a role="button" class="btn btn-primary" asp-route-id="@cliente.Id" asp-controller="Cliente" asp-action="Editar">Editar</a>
+                                <a role="button" class="btn btn-danger" asp-route-id="@cliente.Id" asp-controller="Cliente" asp-action="ApagarConfirmacao">Apagar</a>
                             </div>
                         </td>
                     </tr>

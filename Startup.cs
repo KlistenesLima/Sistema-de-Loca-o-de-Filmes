@@ -1,5 +1,5 @@
-using ControleDeContatos.Data;
-using ControleDeContatos.Repositorio;
+using SistemaLocacao.Data;
+using SistemaLocacao.Repositorio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ControleDeContatos
+namespace SistemaLocacao
 {
     public class Startup
     {
@@ -29,7 +29,7 @@ namespace ControleDeContatos
             services.AddControllersWithViews();
             services.AddEntityFrameworkSqlServer()
                 .AddDbContext<BancoContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DataBase")));
-            services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
+            services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
             services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
         }
 

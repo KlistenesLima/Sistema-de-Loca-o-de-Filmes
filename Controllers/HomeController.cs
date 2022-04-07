@@ -1,4 +1,4 @@
-﻿using ControleDeContatos.Models;
+﻿using SistemaLocacao.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ControleDeContatos.Controllers
+namespace SistemaLocacao.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,7 +1,7 @@
-﻿using ControleDeContatos.Models;
+﻿using SistemaLocacao.Models;
 using System.Collections.Generic;
 
-namespace ControleDeContatos.Repositorio
+namespace SistemaLocacao.Repositorio
 {
     public interface IUsuarioRepositorio
     {

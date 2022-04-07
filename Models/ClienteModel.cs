@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ControleDeContatos.Models
+namespace SistemaLocacao.Models
 {
-    public class ContatoModel
+    public class ClienteModel
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "Digite o nome do contato")]

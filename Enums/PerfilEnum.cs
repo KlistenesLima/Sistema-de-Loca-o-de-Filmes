@@ -1,4 +1,4 @@
-﻿namespace ControleDeContatos.Enums
+﻿namespace SistemaLocacao.Enums
 {
     public enum PerfilEnum
     {
