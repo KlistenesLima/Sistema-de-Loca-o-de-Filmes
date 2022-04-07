@@ -9,7 +9,7 @@ namespace SistemaLocacao.Data
         {
         }
 
-        public DbSet<ClienteModel> Contatos { get; set; }
+        public DbSet<ClienteModel> Clientes { get; set; }
         public DbSet<UsuarioModel> Usuarios { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 using System;
 
-namespace ControleDeContatos.Models
+namespace SistemaLocacao.Models
 {
     public class ErrorViewModel
     {

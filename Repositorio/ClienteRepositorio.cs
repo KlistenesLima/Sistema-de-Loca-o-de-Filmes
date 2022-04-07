@@ -16,18 +16,18 @@ namespace SistemaLocacao.Repositorio
 
         public ClienteModel ListarPorId(int id)
         {
-            return _context.Contatos.FirstOrDefault(x => x.Id == id);
+            return _context.Clientes.FirstOrDefault(x => x.Id == id);
         }
 
         public List<ClienteModel> BucarTodos()
         {
-            return _context.Contatos.ToList();
+            return _context.Clientes.ToList();
         }
 
         public ClienteModel Adicionar(ClienteModel cliente)
         {
             // gravar no banco de dados
-            _context.Contatos.Add(cliente);
+            _context.Clientes.Add(cliente);
             _context.SaveChanges();
 
             return cliente;
@@ -43,7 +43,7 @@ namespace SistemaLocacao.Repositorio
             contatoDB.Email = cliente.Email;
             contatoDB.Celular = cliente.Celular;
 
-            _context.Contatos.Update(contatoDB);
+            _context.Clientes.Update(contatoDB);
             _context.SaveChanges();
 
             return contatoDB;
@@ -56,7 +56,7 @@ namespace SistemaLocacao.Repositorio
 
             if (contatoDB == null) throw new System.Exception("Houve um erro na deleção do contato!");
 
-            _context.Contatos.Remove(contatoDB);
+            _context.Clientes.Remove(contatoDB);
             _context.SaveChanges();
 
             return true;
