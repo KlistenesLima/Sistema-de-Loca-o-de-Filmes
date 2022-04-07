@@ -40,8 +40,8 @@ namespace SistemaLocacao.Repositorio
             if (contatoDB == null) throw new System.Exception("Houve um erro na atualização do contato!");
 
             contatoDB.Nome = cliente.Nome;
-            contatoDB.Email = cliente.Email;
-            contatoDB.Celular = cliente.Celular;
+            contatoDB.CPF = cliente.CPF;
+            contatoDB.DataNascimento = cliente.DataNascimento;
 
             _context.Clientes.Update(contatoDB);
             _context.SaveChanges();

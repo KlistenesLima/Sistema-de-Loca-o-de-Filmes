@@ -1,32 +1,32 @@
 ﻿@model ClienteModel
 @{
-    ViewData["Title"] = "Criar contato";
+    ViewData["Title"] = "Criar cliente";
 }
 
 <div class="text-center">
 
-    <h1 class="display-4">Cadastrar contato</h1>
+    <h1 class="display-4">Cadastrar cliente</h1>
 
 </div>
-<form asp-controller="Contato" asp-action="Criar" method="post">
+<form asp-controller="Cliente" asp-action="Criar" method="post">
 
     <div class="form-group">
         <label for="nome">Nome</label>
-        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do contato">
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do cliente">
         @Html.ValidationMessageFor(x => x.Nome)
     </div>
     <div class="form-group">
         <label for="nome">E-mail</label>
-        <input type="text" asp-for="Email" class="form-control" placeholder="Digite o e-mail do contato">
-        @Html.ValidationMessageFor(x => x.Email)
+        <input type="text" asp-for="CPF" class="form-control" placeholder="Digite o e-mail do cliente">
+        @Html.ValidationMessageFor(x => x.CPF)
     </div>
     <div class="form-group">
         <label for="nome">Celular</label>
-        <input type="text" asp-for="Celular" class="form-control" placeholder="Digite o celular do contato">
-        @Html.ValidationMessageFor(x => x.Celular)
+        <input type="text" asp-for="DataNascimento" class="form-control" placeholder="Digite o celular do cliente">
+        @Html.ValidationMessageFor(x => x.DataNascimento)
     </div> 
 
     <button type="submit" class="btn btn-primary btn-block">Adicionar</button>
-    <a class="btn btn-secondary btn-block" asp-controller="Contato" asp-action="Index" role="button">Voltar</a>
+    <a class="btn btn-secondary btn-block" asp-controller="Cliente" asp-action="Index" role="button">Voltar</a>
 </form>
 

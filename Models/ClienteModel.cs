@@ -1,17 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace SistemaLocacao.Models
 {
     public class ClienteModel
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "Digite o nome do contato")]
+        [Required(ErrorMessage = "Digite o nome do cliente")]
         public string Nome { get; set; }
-        [Required(ErrorMessage = "Digite o e-mail do contato")]
-        [EmailAddress(ErrorMessage = "O e-mail informado não é válido!")]
-        public string Email{ get; set; }
-        [Required(ErrorMessage = "Digite o celular do contato")]
-        [Phone(ErrorMessage = "O celular informado não é válido!")]
-        public string Celular { get; set; }
+        [Required(ErrorMessage = "Digite o CPF do cliente")]
+        public string CPF { get; set; }
+        [Required(ErrorMessage = "Digite a data de nascimento")]
+        public DateTime DataNascimento { get; set; }
     }
 }
