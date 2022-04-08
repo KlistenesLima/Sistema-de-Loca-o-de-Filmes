@@ -35,9 +35,8 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nome</th>
-                <th scope="col">CPF</th>
-                <th scope="col">Data de Nascimento</th>
+                <th scope="col">Id do Cliente</th>
+                <th scope="col">Id do Filme</th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -48,8 +47,8 @@
                 {
                     <tr>
                         <th scope="row">@locacao.Id</th>
-                        <td>@locacao.Cliente</td>
-                        <td>@locacao.Filme</td>
+                        <td>@locacao.Id_Cliente</td>
+                        <td>@locacao.Id_Filme</td>
                         <td>
                             <div class="btn-group" role="group">
                                 <a role="button" class="btn btn-primary" asp-route-id="@locacao.Id" asp-controller="Locacao" asp-action="Editar">Editar</a>

@@ -1,5 +1,4 @@
-﻿@model ClienteLocacaoFilme
-using System.Collections.Generic;
+﻿@model LocacaoModel
 @{
     ViewData["Title"] = "Cadastrar locação";
 }
@@ -12,28 +11,24 @@ using System.Collections.Generic;
 <form asp-controller="Locacao" asp-action="Criar" method="post">
 
     <div class="form-group">
-        <input type="hidden" asp-for="Cliente.Id" />
         <label for="nome">Nome</label>
-        <select asp-for="Locacao.Cliente" class="form-control" >
-            <option></option>
-        </select>
-        @Html.ValidationMessageFor(x => x.Locacao.Cliente)
+        <input type="int" asp-for="Id_Cliente" class="form-control" placeholder="Digite a data de nascimento do cliente">
+        @Html.ValidationMessageFor(x => x.Id_Cliente)
     </div>
     <div class="form-group">
         <label for="nome">Filme</label>
-        <select asp-for="Filme.Titulo" class="form-control" placeholder="Digite a data de nascimento do cliente">
-        </select>
-        @Html.ValidationMessageFor(x => x.Filme.Titulo)
+        <input type="int" asp-for="Id_Filme" class="form-control" placeholder="Digite a data de nascimento do cliente">
+        @Html.ValidationMessageFor(x => x.Id_Filme)
     </div>
     <div class="form-group">
         <label for="nome">Celular</label>
-        <input type="date" asp-for="Locacao.DataLocacao" class="form-control" placeholder="Digite a data de nascimento do cliente">
-        @Html.ValidationMessageFor(x => x.Locacao.DataLocacao)
+        <input type="date" asp-for="DataLocacao" class="form-control" placeholder="Digite a data de nascimento do cliente">
+        @Html.ValidationMessageFor(x => x.DataLocacao)
     </div>
     <div class="form-group">
         <label for="nome">Celular</label>
-        <input type="date" asp-for="Locacao.DataDevolucao" class="form-control" placeholder="Digite a data de nascimento do cliente">
-        @Html.ValidationMessageFor(x => x.Locacao.DataDevolucao)
+        <input type="date" asp-for="DataDevolucao" class="form-control" placeholder="Digite a data de nascimento do cliente">
+        @Html.ValidationMessageFor(x => x.DataDevolucao)
     </div>
 
     <button type="submit" class="btn btn-primary btn-block">Adicionar</button>

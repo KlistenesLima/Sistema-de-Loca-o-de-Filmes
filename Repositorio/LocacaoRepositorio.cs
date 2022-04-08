@@ -39,8 +39,8 @@ namespace SistemaLocacao.Repositorio
 
             if (locacaoDB == null) throw new System.Exception("Houve um erro na atualização do contato!");
 
-            locacaoDB.Cliente = locacao.Cliente;
-            locacaoDB.Filme = locacao.Filme;
+            locacaoDB.Id_Cliente = locacao.Id_Cliente;
+            locacaoDB.Id_Filme = locacao.Id_Filme;
             locacaoDB.DataLocacao = locacao.DataLocacao;
             locacaoDB.DataDevolucao = locacao.DataDevolucao;
 
