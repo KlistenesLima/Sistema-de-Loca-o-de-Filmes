@@ -39,9 +39,10 @@ namespace SistemaLocacao.Repositorio
 
             if (locacaoDB == null) throw new System.Exception("Houve um erro na atualização do contato!");
 
-            locacaoDB.Nome = locacao.Nome;
-            locacaoDB.CPF = locacao.CPF;
-            //locacaoDB.DataNascimento = locacao.DataNascimento;
+            locacaoDB.Cliente = locacao.Cliente;
+            locacaoDB.Filme = locacao.Filme;
+            locacaoDB.DataLocacao = locacao.DataLocacao;
+            locacaoDB.DataDevolucao = locacao.DataDevolucao;
 
             _context.Locacoes.Update(locacaoDB);
             _context.SaveChanges();

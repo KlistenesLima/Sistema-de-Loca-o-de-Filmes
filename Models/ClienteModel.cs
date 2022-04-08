@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SistemaLocacao.Models
 {
-    public class ClienteModel
+    public class ClienteModel 
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "Digite o nome do cliente")]
