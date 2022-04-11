@@ -11,18 +11,19 @@
 <form asp-controller="Filme" asp-action="Criar" method="post">
     
     <div class="form-group">
-        <label for="nome">Titulo</label>
+        <label for="nome">Título:</label>
         <input type="text" asp-for="Titulo" class="form-control" placeholder="Digite o título do filme">
         @Html.ValidationMessageFor(x => x.Titulo)
     </div>
     <div class="form-group">
-        <label for="nome">Classificação Indicativa</label>
-        <input type="text" asp-for="ClassificacaoIndicativa" class="form-control" placeholder="Digite classificação indicativa do filme">
+        <label for="nome">Classificação Indicativa:</label>
+        <input type="number" asp-for="ClassificacaoIndicativa" class="form-control" placeholder="Digite classificação indicativa do filme">
         @Html.ValidationMessageFor(x => x.ClassificacaoIndicativa)
     </div>
     <div class="form-group">
-        <label for="nome">Lançamento</label>
-        <input type="date" asp-for="Lancamento" class="form-control" placeholder="Digite a data de lançamento do filme">
+        <label for="nome">Lançamento:  </label>
+        @Html.RadioButtonFor(model => model.Lancamento, true) SIM
+        @Html.RadioButtonFor(model => model.Lancamento, false) NÂO 
         @Html.ValidationMessageFor(x => x.Lancamento)
     </div> 
 

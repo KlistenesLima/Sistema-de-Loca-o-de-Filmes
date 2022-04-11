@@ -66,6 +66,11 @@ namespace SistemaLocacao.Controllers
 
         }
 
+        public ActionResult MyImage()
+        {
+            return File(@"C:\Users\Pichau\Desktop\e-Auditoria\SistemaLocacao\images\", "editar.png/jpg");
+        }
+
         [HttpPost]
         public IActionResult Criar(LocacaoModel locacao)
         {

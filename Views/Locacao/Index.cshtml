@@ -29,7 +29,7 @@
 
     <br />
 
-    <h1 class="display-4">Listagem de contatos</h1>
+    <h1 class="display-4">Listagem de Locações</h1>
 
     <table class="display" id="table-locacao" style="width:100%">
         <thead>
@@ -37,6 +37,8 @@
                 <th scope="col">#</th>
                 <th scope="col">Id do Cliente</th>
                 <th scope="col">Id do Filme</th>
+                <th scope="col">Data de Locação</th>
+                <th scope="col">Data de Devolução</th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -49,6 +51,8 @@
                         <th scope="row">@locacao.Id</th>
                         <td>@locacao.Id_Cliente</td>
                         <td>@locacao.Id_Filme</td>
+                        <td>@locacao.DataLocacao</td>
+                        <td>@locacao.DataDevolucao</td>
                         <td>
                             <div class="btn-group" role="group">
                                 <a role="button" class="btn btn-primary" asp-route-id="@locacao.Id" asp-controller="Locacao" asp-action="Editar">Editar</a>

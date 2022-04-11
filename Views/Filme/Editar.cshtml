@@ -12,18 +12,19 @@
 
     <input type="hidden" asp-for="Id"/>
     <div class="form-group">
-        <label for="nome">Titulo</label>
+        <label for="nome">Título:</label>
         <input type="text" asp-for="Titulo" class="form-control" placeholder="Digite o nome do cliente">
         @Html.ValidationMessageFor(x => x.Titulo)
     </div>
     <div class="form-group">
-        <label for="nome">Classificação Indicativa</label>
-        <input type="text" asp-for="ClassificacaoIndicativa" class="form-control" placeholder="Digite o e-mail do cliente">
+        <label for="nome">Classificação Indicativa:</label>
+        <input type="number" asp-for="ClassificacaoIndicativa" class="form-control" placeholder="Digite o e-mail do cliente">
         @Html.ValidationMessageFor(x => x.ClassificacaoIndicativa)
     </div>
-    <div class="form-group">
-        <label for="nome">Lançamento</label>
-        <input type="text" asp-for="Lancamento" class="form-control" placeholder="Digite o celular do cliente">
+   <div class="form-group">
+        <label for="nome">Lançamento:  </label>
+        @Html.RadioButtonFor(model => model.Lancamento, true) SIM
+        @Html.RadioButtonFor(model => model.Lancamento, false) NÂO 
         @Html.ValidationMessageFor(x => x.Lancamento)
     </div> 
     <button type="submit" class="btn btn-primary btn-block">Alterar</button>

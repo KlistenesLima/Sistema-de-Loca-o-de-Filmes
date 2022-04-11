@@ -10,8 +10,8 @@ using SistemaLocacao.Data;
 namespace SistemaLocacao.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    [Migration("20220408124618_AtualizacaoModelLocacao")]
-    partial class AtualizacaoModelLocacao
+    [Migration("20220411131919_NovaMigrationGeral")]
+    partial class NovaMigrationGeral
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,14 +30,16 @@ namespace SistemaLocacao.Migrations
 
                     b.Property<string>("CPF")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(14)
+                        .HasColumnType("nvarchar(14)");
 
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
 
@@ -54,8 +56,8 @@ namespace SistemaLocacao.Migrations
                     b.Property<int>("ClassificacaoIndicativa")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Lancamento")
-                        .HasColumnType("datetime2");
+                    b.Property<bool>("Lancamento")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Titulo")
                         .IsRequired()
