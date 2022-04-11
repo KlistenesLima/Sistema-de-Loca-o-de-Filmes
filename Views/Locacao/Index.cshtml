@@ -1,12 +1,12 @@
 ﻿@model List<LocacaoModel>
 @{
-    ViewData["Title"] = "Listagem de locações";
+    ViewData["Title"] = "Listagem de Locações -";
 }
 
 <div class="text-center">
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" role="button" asp-controller="Locacao" asp-action="Criar"> Adicionar nova locação de filmes</a>
+        <a class="btn btn-success" role="button" asp-controller="Locacao" asp-action="Criar"> Adicionar nova locação de filmes</a>
     </div>
 
     <br />
@@ -31,7 +31,7 @@
 
     <h1 class="display-4">Listagem de contatos</h1>
 
-    <table class="display" id="table-contatos" style="width:100%">
+    <table class="display" id="table-locacao" style="width:100%">
         <thead>
             <tr>
                 <th scope="col">#</th>

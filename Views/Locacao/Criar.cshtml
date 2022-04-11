@@ -5,28 +5,28 @@
 
 <div class="text-center">
 
-    <h1 class="display-4">Cadastrar cliente</h1>
+    <h1 class="display-4">Cadastrar locação de filmes</h1>
 
 </div>
 <form asp-controller="Locacao" asp-action="Criar" method="post">
 
     <div class="form-group">
-        <label for="nome">Nome</label>
-        <input type="int" asp-for="Id_Cliente" class="form-control" placeholder="Digite a data de nascimento do cliente">
+        <label for="nome">Digite o id do cliente</label>
+        <input type="int" asp-for="Id_Cliente" class="form-control" placeholder="Digite o id do cliente">
         @Html.ValidationMessageFor(x => x.Id_Cliente)
     </div>
     <div class="form-group">
-        <label for="nome">Filme</label>
-        <input type="int" asp-for="Id_Filme" class="form-control" placeholder="Digite a data de nascimento do cliente">
+        <label for="nome">Digite o id do filme</label>
+        <input type="int" asp-for="Id_Filme" class="form-control" placeholder="Digite o id do filme">
         @Html.ValidationMessageFor(x => x.Id_Filme)
     </div>
     <div class="form-group">
-        <label for="nome">Celular</label>
+        <label for="nome">Data de locação</label>
         <input type="date" asp-for="DataLocacao" class="form-control" placeholder="Digite a data de nascimento do cliente">
         @Html.ValidationMessageFor(x => x.DataLocacao)
     </div>
     <div class="form-group">
-        <label for="nome">Celular</label>
+        <label for="nome">Data de devolução</label>
         <input type="date" asp-for="DataDevolucao" class="form-control" placeholder="Digite a data de nascimento do cliente">
         @Html.ValidationMessageFor(x => x.DataDevolucao)
     </div>

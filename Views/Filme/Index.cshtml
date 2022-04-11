@@ -1,12 +1,12 @@
 ﻿@model List<FilmeModel>
 @{
-    ViewData["Title"] = "Listagem de filmes";
+    ViewData["Title"] = "Listagem de Filmes -";
 }
 
 <div class="text-center">
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" role="button" asp-controller="Filme" asp-action="Criar"> Adicionar novo filme</a>
+        <a class="btn btn-success" role="button" asp-controller="Filme" asp-action="Criar"> Adicionar novo filme</a>
     </div>
 
     <br />
@@ -31,7 +31,7 @@
 
     <h1 class="display-4">Listagem de filmes</h1>
 
-    <table class="display" id="table-contatos" style="width:100%">
+    <table class="display" id="table-filmes" style="width:100%">
         <thead>
             <tr>
                 <th scope="col">#</th>

@@ -1,12 +1,12 @@
 ﻿@model List<ClienteModel>
 @{
-    ViewData["Title"] = "Listagem de clientes";
+    ViewData["Title"] = "Listagem de Clientes -";
 }
 
 <div class="text-center">
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" role="button" asp-controller="Cliente" asp-action="Criar"> Adicionar novo cliente</a>
+        <a class="btn btn-success" role="button" asp-controller="Cliente" asp-action="Criar"> Adicionar novo cliente</a>
     </div>
 
     <br />
@@ -29,9 +29,9 @@
 
     <br />
 
-    <h1 class="display-4">Listagem de contatos</h1>
+    <h1 class="display-4">Listagem de clientes</h1>
 
-    <table class="display" id="table-contatos" style="width:100%">
+    <table class="display" id="table-clientes" style="width:100%">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -53,7 +53,7 @@
 @*                        <td>@cliente.DataNascimento</td>*@
                         <td>
                             <div class="btn-group" role="group">
-                                <a role="button" class="btn btn-primary" asp-route-id="@cliente.Id" asp-controller="Cliente" asp-action="Editar">Editar</a>
+                                <a role="button" class="btn btn-primary button-edit" asp-route-id="@cliente.Id" asp-controller="Cliente" asp-action="Editar">Editar</a>
                                 <a role="button" class="btn btn-danger" asp-route-id="@cliente.Id" asp-controller="Cliente" asp-action="ApagarConfirmacao">Apagar</a>
                             </div>
                         </td>
